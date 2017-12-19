@@ -21,17 +21,16 @@
     <div id="map"></div>
     <script src="./js/mapzen.min.js"></script>
     <script>
-      // Add a Mapzen API key (replace with your own)
-      // To generate your key, go to https://mapzen.com/developers/
+      // mapzen.js expects a Mapzen key
       L.Mapzen.apiKey = 'mapzen-6VCZ2xH';
 
       var lon = -74.009,
           lat = 40.70531;
 
-      // creates a map with default (bubble-wrap) style
+      // reference locally saved scene file
       var map = L.Mapzen.map('map', {
         tangramOptions: {
-          debug: true
+          scene: 'scene.yaml'
         }
       });
 
@@ -49,14 +48,6 @@
         map: map,
         geocoder: geocoder
       });
-
-
-      // creates a Mapzen "bug" with header for Mapzen projects
-      L.Mapzen.bug({
-        name: 'Web Map',
-        tweet: '@mapzen',
-        repo: 'https://github.com/mapzen/web-map',
-        mapID: 'map'});
 
       // adds a locator button to the map
       var locator = L.Mapzen.locator();
