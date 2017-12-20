@@ -2,6 +2,25 @@
 
 Notes on setting up a small localized demo of mapzen.js
 
+At the moment, this demo only points to locally hosted vector tiles. It does not include locally hosted search or routing endpoints.
+
+
+## To run locally
+
+Download this repo, then start a web server in its directory:
+```
+python -m SimpleHTTPServer 8000
+```
+
+If that doesn't work, try:
+```
+python -m http.server 8000
+```
+
+Then navigate to: http://localhost:8000
+
+
+
 ## To fetch a subset of tiles using [tilepacks](https://github.com/tilezen/tilepacks)
 
 Clone tilepacks
