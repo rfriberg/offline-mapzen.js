@@ -36,27 +36,9 @@
 
       map.setView([lat, lon],13);
 
-      // moves zoom control to the bottom right of the map page
-      map.zoomControl.setPosition('bottomright');
-
-      // adds a search box to a map
-      var geocoder = L.Mapzen.geocoder();
-      geocoder.addTo(map);
-
       // allows for a URL hash to be created
       L.Mapzen.hash({
-        map: map,
-        geocoder: geocoder
-      });
-
-      // adds a locator button to the map
-      var locator = L.Mapzen.locator();
-      locator.setPosition('bottomright');
-      locator.addTo(map);
-
-      // adds a tangram event listener
-      map.on('tangramloaded', function(e) {
-        console.log(e.tangramLayer);
+        map: map
       });
 
     </script>
